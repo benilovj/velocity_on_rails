@@ -1,0 +1,42 @@
+== VelocityOnRails
+
+This is a Rails plugin for using Velocity (http://velocity.apache.org/) templates in your views under JRuby.
+It might be useful if you are migrating a Java project to Rails.
+
+This is compatible with Rails 3.0.
+
+=== Building The Gem
+
+  git clone http://github.com/benilovj/velocity_on_rails.git
+  cd velocity_on_rails
+  gem build velocity_on_rails.gemspec
+
+=== Installation
+
+1. Install the gem.
+
+2. Add the following line to your Rails Gemfile:
+
+  gem 'velocity_on_rails'
+
+3. Invoke the command:
+
+  bundle install
+
+to install the gem
+
+=== Usage
+
+Place Velocity templates under apps/views with the .vel extension.
+
+You can inject variables into your views by providing a variables Hash to the :locals:
+
+  class DemoController < ApplicationController
+    def index
+      render :layout => false, :locals => {:page_title => "demo"}
+    end
+  end 
+
+It is possible to use the Velocity #parse command, but the path specified needs to be relative to 'Rails.home/app/views'.
+
+Copyright (c) 2010 Jake Benilov, released under the MIT license
