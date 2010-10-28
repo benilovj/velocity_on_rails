@@ -13,10 +13,10 @@ This is compatible with Rails 3.0.
 
 === Installation
 
-1. Install the gem.
-2. Add the following line to your Rails Gemfile:
+- Install the gem.
+- Add the following line to your Rails Gemfile:
   gem 'velocity_on_rails'
-3. Invoke the command:
+- Invoke the command:
   bundle install
 to install the gem.
 
